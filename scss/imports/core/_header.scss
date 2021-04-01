@@ -1,0 +1,174 @@
+// css header
+header {
+    --brandHeight: 65px;
+    width: 100%;
+    .brand {
+        width: 100%;
+        height: var(--brandHeight);
+        background-color: $grey-cl;
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .ham-menu {
+                display: none;
+                position: relative;
+                width: 22px;
+                height: 15px;
+                cursor: pointer;
+                transition: 0.4s ease-in-out;
+                -webkit-transition: 0.4s ease-in-out;
+                -moz-transition: 0.4s ease-in-out;
+                -o-transition: 0.4s ease-in-out;
+                margin-left: 10px;
+                &::before,
+                &::after,
+                span {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 20px;
+                    background-color: $yellow-cl;
+                    -webkit-transition: 0.3s ease-in-out;
+                    -moz-transition: 0.3s ease-in-out;
+                    -o-transition: 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out;
+                }
+                span {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &::after {
+                    bottom: 0;
+                }
+                &.active {
+                    &::before {
+                        --webkit-transform: rotate(-45deg) translate(-5px, 3px);
+                        transform: rotate(-45deg) translate(-5px, 3px);
+                        transition: 0.4s;
+                    }
+                    span {
+                        opacity: 0;
+                    }
+                    &::after {
+                        --webkit-transform: rotate(45deg) translate(-6px, -5px);
+                        transform: rotate(45deg) translate(-6px, -5px);
+                        transition: 0.4s;
+                    }
+                }
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+            i {
+                margin-right: 20px;
+                color: #ffde00;
+                font-size: 22px;
+                @media (min-width: 1200px) {
+                    margin-right: 0;
+                }
+            }
+        }   
+    }
+    nav {
+        .menu {
+            height: var(--brandHeight);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $black-cl;
+            &.br-none {
+                border-bottom: none;
+            }     
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }     
+            li {
+                list-style-type: none;
+                &:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0;
+                    }
+                }
+                a {
+                    display: inline-block;
+                    @include text(12px, 'pb', 20px, $text-nav-cl, uppercase);
+                    padding: 40px 30px 20px 30px;
+                }
+            }
+        }
+    }
+    .menu-mobile {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: var(--brandHeight);
+        left: 0;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 20;
+        transform: translateX(-100%);
+        @include transition(0.9s cubic-bezier(0.59, 0.1, 0.23, 1.06));
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: $grey-cl;
+            position: relative;
+            ul {
+                width: 100%;
+                li {
+                    width: 100%;
+                    padding: 0;
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 10px;
+                        @include text(14px, 'peb',  24px, $white-cl, uppercase);
+                        transition: 0.4s;
+                        &.active,
+                        &:hover {
+                            background-color: $yellow-cl;
+                            color: $text-cl;
+                        }
+                    }
+                }
+            }
+        }
+        &.active {
+            display: block;
+            transition: 0.4s;
+            transform: translateX(0);
+            @include transition(0.9s cubic-bezier(0.59, 0.1, 0.23, 1.06));
+        }
+    }
+    @media (max-width: 736px) {
+        --brandHeight: 60px; 
+        .container {
+            nav {
+                display: none;
+            }
+        }
+        .brand {
+            .container {   
+                .ham-menu {
+                    display: block;
+                }
+            }
+        }    
+    } 
+}

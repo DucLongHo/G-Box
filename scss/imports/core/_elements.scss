@@ -1,0 +1,225 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+i {
+    color: $text-cl;
+}
+label, input {
+    display: block;
+}
+button {
+    outline: none;
+    border: none;
+}
+.introduction {
+    width: 100%;
+    .container {
+        width: 100%;
+        &.has-bg {
+            background-image: url('img/contact-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: $black-cl;
+        }
+        .textbox {
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            max-width: 740px;
+            padding-top: 54px;       
+            .subtitle {
+                @include text(14px, 'pr', 22px, $text-cl, uppercase);
+                letter-spacing: 2px;
+                padding-bottom: 30px;
+                &.yellow {
+                    color: $yellow-cl;
+                }
+            }
+            .title {
+                @include text(20px, 'pb', 30.48px, $grey-cl, uppercase);
+                letter-spacing: 4px;
+                padding-bottom: 28px;
+                mark {
+                    background-color: $yellow-cl;
+                }
+                &.yellow {
+                    color: $yellow-cl;
+                }
+            }
+            .des {
+                @include text(12px, 'Arial', 22px, $text-cl, none);
+                padding-bottom: 57px;
+                span {
+                    font-weight: bold;
+                }
+                &.white {
+                    color: $white-cl;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 336px;
+                height: 1px;
+                background-color: $black-cl;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @media (max-width: 736px) {
+                &::after {
+                    display: none;
+                }
+            }
+            @media (min-width: 320px) and (max-width: 575px) {
+                padding-top: 40px;
+                .des {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        &.has-bg {
+            .textbox {
+                &::after {
+                    background-color: $yellow-cl;
+                }
+            }
+            @media (max-width: 767px) {
+                .textbox {
+                    .des {
+                        display: block;
+                    }
+                    &::after {
+                        display: block;
+                        border-width: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 40px;
+        a {
+            @include text(12px, 'pr', 30.48px, $text-cl, none);
+            &.yellow {
+                color: $yellow-cl;
+            }
+            i {
+                color: $text-cl;
+                font-size: 15px;
+                display: inline-block;
+                padding-top: 5px;
+                &.yellow {
+                    color: $yellow-cl;
+                }
+            }
+            span {
+                display: inline-block;
+                margin-left: 20px;
+                margin-right: 17px;
+            }
+        }
+        span {
+            color: $text-cl;
+            &.yellow {
+                color: $yellow-cl;
+            }
+        }
+}
+.col {
+    .title {
+        @include text(32px, 'pex', 30.48px, #39382f, none);
+        margin-bottom: 20px;
+    }
+    .des {
+        @include text(14px, 'Arial', 20px, #2d2e2e, none);
+        margin-bottom: 20px;
+        strong {
+            font-weight: bold;
+        }
+    }
+    .content {
+        p {
+            @include text(12px, 'pr', 20px, #1a1a1a, none);
+            margin-bottom: 26px;
+        }
+    }
+}
+.btn-book {
+    --btnHeight: 100px;
+    display: flex;
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+    &.f-start {
+        align-items: flex-start;
+    }
+    i {
+        font-size: 25px;
+        display: block;
+        margin-bottom: 22px;
+        animation: scroll 1s linear infinite;
+    } 
+    a {
+        @include text(20px, 'peb', 30.48px, $yellow-cl, uppercase);
+        text-align: center;
+        width: var(--btnHeight);
+        height: var(--btnHeight);
+        border-radius: 10px;
+        background-color:#525355; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+        &.center {
+            margin: 0 auto;
+        }
+        &.yellow {
+            background-color: $yellow-cl;
+            color: $text-cl;
+        }
+        &:hover {
+            background-color: $yellow-cl;
+            color: #525355;
+            transition: 0.4s;
+        }
+    }
+    span {
+        @include text(14px, 'pr', 20px, $white-cl, none);
+        display: inline-block;
+        max-width: 100px;
+        margin-left: 20px;
+    }
+}
+
+/*animation*/
+@keyframes scrollUp {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}

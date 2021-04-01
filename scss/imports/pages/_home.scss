@@ -1,0 +1,167 @@
+// CSS HOMEPAGE
+.page-wrapper {
+    .project {
+        margin-top: 48px;
+        .container {
+            border-bottom: 1px solid $black-cl;
+        }
+        .project__tab {
+            display: flex;
+            justify-content: center;
+            a {
+                @include text(12px, 'peb', 30px, #898989, uppercase);
+                padding: 0 20px 20px;
+                &.active,
+                &:hover {
+                    color: $text-cl;
+                }
+            }
+        }
+        .project__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 80px 20px;
+            margin-bottom: 70px;
+            .project__item {
+                display: none;
+                .image {
+                    position: relative;
+                    transition: 0.4s ease;
+                    img {
+                        width: 100%;
+                        opacity: 1;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        display: block;
+                    }
+                    .middle {
+                        transition: 0.4s ease;
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        text-align: center;
+                        .text {
+                            display: flex;
+                            align-items: center;
+                            background-color: $yellow-cl;
+                            @include text(14px, 'pb', normal, $text-cl, none);
+                            padding: 10px;
+                            i {
+                                display: inline-block;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        img {
+                            opacity: 0.3;
+                        }
+                        .middle {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .caption {
+                    text-align: center;
+                    margin-top: 34px;
+                    h4 {
+                        a {
+                            @include text(12px, 'peb', normal, $text-cl, uppercase);
+                            padding-bottom: 10px;
+                            position: relative;
+                            display: block;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 16px;
+                                height: 3px;
+                                background-color: $yellow-cl;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                display: block;
+                            }
+                        }    
+                    }
+                    p {
+                        @include text(12px, 'pb', 22px, $text-cl, none);
+                        &.p-top {
+                            margin-top: 10px;
+                        }
+                        span {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+        .project__control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 72px;
+            span {
+                @include text(12px, 'pb', 30px, $text-cl, uppercase);
+            }
+            i {
+                font-size: 20px;
+                animation: scroll 1s linear infinite;
+                display: block;
+                margin-top: 20px;
+                &.less {
+                    animation: scrollUp 1s linear infinite;
+                }
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            margin-top: 20px;
+            .project__list {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 25px;
+            }
+        }
+        @media (max-width: 736px) {
+            margin-top: 0px;
+            .project__tab {
+                display: none;
+            }
+            .project__list {
+                grid-template-columns: 1fr;
+                grid-row-gap: 30px;
+                .project__item {
+                    .caption {
+                        margin-top: 40px;
+                        h4 {
+                            a {
+                                font-size: 14px;
+                                padding-bottom: 20px;
+                            }
+                        }
+                        p {
+                            font-size: 14px;
+                            line-height: 30px;
+                            &.p-top {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                }
+        }
+        @media (min-width: 320px) and (max-width: 575px) {
+            .project__list {
+                .project__item {
+                    &:nth-child(n + 4) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

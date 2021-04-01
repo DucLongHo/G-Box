@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>GBOX STUDIOS</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: 'pr';
+            src: url('fonts/ProximaNova-Regular.woff2') format('woff2'),
+                url('fonts/ProximaNova-Regular.woff') format('woff');
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'pb';
+            src: url('fonts/ProximaNova-Bold.woff2') format('woff2'),
+                url('fonts/ProximaNova-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'peb';
+            src: url('fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+                url('fonts/ProximaNova-Extrabld.woff') format('woff');
+            font-weight: 800;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'pl';
+            src: url('fonts/ProximaNovaA-Light.woff2') format('woff2'),
+                url('fonts/ProximaNovaA-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'dc';
+            src: url('fonts/D-DINCondensed-Bold.woff2') format('woff2'),
+                url('fonts/D-DINCondensed-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: fallback;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="container">
+                <div class="ham-menu">
+                    <span></span>
+                </div>
+                <img src="img/logo.png" alt="Gbox Studios">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="aboutus.html">about</a></li>
+                    <ul class="center">
+                        <li><a href="studio.html" target="_blank">studio</a></li>
+                        <li><a href="rental.html">rental</a></li>
+                        <li><a href="cafeBox.html">cafe</a></li>
+                        <li><a href="#">work</a></li>
+                    </ul>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-mobile">
+            <div class="inner">
+                <ul>
+                    <li><a href="aboutus.html">about</a></li>
+                    <li><a href="studio.html">studio</a></li>
+                    <li><a href="rental.html">rental</a></li>
+                    <li><a href="cafeBox.html">cafe</a></li>
+                    <li><a href="#">work</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="studio-rental">
+        <section>
+            <div class="container">
+                <div class="studio__info">
+                    <div class="info">
+                        <div class="num">
+                            <p class="txt-uppercase">studio</p>
+                            <p>01</p>
+                        </div>
+                        <div class="text">
+                            <h4 class="title">Rental</h4>
+                            <div class="des">
+                                <p class="txt-uppercase">dimensions</p>
+                                <p>87ft x 92ft x 31ft</p>
+                                <p>(26.52m x 28.04m x 9.45m)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="register">
+                    <h5 class="title">Company details</h5>
+                    <div class="row register__detail">
+                        <div class="col">
+                            <label for="company name"><b>Company Name:<sub>*</sub></b></label>
+                            <input type="text" name="company name" class="has-margin" required>
+
+                            <label for="contact name"><b>Contact Name:<sub>*</sub></b></label>
+                            <input type="text" name="contact name" class="has-margin" required>
+
+                            <label for="phone"><b>Phone:<sub>*</sub></b></label>
+                            <input type="text" name="phone" required>
+                        </div>
+                        <div class="col">
+                            <label for="email"><b>Email:<sub>*</sub></b></label>
+                            <input type="email" name="email" class="has-margin" required>
+
+                            <label for="acc">Accounts payable contact:<sub>*</sub></label>
+                            <input type="text" name="acc" class="has-margin" required>
+
+                            <label for="address">Company Address:<sub>*</sub></label>
+                            <textarea name="address" required></textarea>
+                        </div>
+                    </div>
+                    <h5 class="title">Booking Details</h5>
+                    <p class="studio-options">Studio:</p>
+                    <div class="options">
+                        <a href="#" class="active">01</a>
+                        <a href="#">02</a>
+                        <a href="#">03</a>
+                        <a href="#">04</a>
+                    </div>
+                    <div class="register__require row">
+                        <div class="col">
+                            <label for="cater">Catering requirements:</label>
+                            <textarea name="cater" class="has-margin"></textarea>
+                        </div>
+                        <div class="col" style="width: 80px;"></div>
+                        <div class="col">
+                            <label for="lighting">Lighting requirements:</label>
+                            <textarea name="lighting" class="has-margin"></textarea>
+                            <p><em>Please note: All lighting hire to go through Gbox Studios</em></p>
+                        </div>
+                    </div>
+
+                    <label for="duration">Booking Duration:</label>
+                    <div class="row register__duration">
+                        <div class="col">
+                            <input type="date" name="duration">
+                        </div>
+                        <div class="col has-w">
+                            <i class="fas fa-chevron-right icon-des"></i>
+                            <i class="fas fa-chevron-down icon-mb"></i>
+                        </div>
+                        <div class="col last">
+                            <input type="date" name="duration">
+                        </div>
+                    </div>
+                    <div class="row full-w register__ref">
+                        <label for="reference">Project Reference:</label>
+                        <input type="text" name="reference">
+                    </div>
+                    <div class="row full-w">
+                        <label for="source">Where did you hear about us:</label>
+                        <input type="text" name="source">
+                    </div>
+                    <div class="btn-book f-start submit">
+                        <a href="#">submit</a>
+                        <span>By submitting this form I agree to <strong>GBox Studio's</strong>Terms &
+                            Conditions.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <address class="contact">
+                <div class="contact__email">
+                    <p>email</p>
+                    <p>info@goldenboxstudios.com</p>
+                </div>
+                <div class="contact__tel">
+                    <span>tel</span>
+                    <span>+84 979 872 809</span>
+                </div>
+                <div class="contact__address">
+                    <p>address</p>
+                    <p>04 bau cat district tan binh<br>ho chi minh city.</p>
+                </div>
+            </address>
+            <div class="right">
+                <p>if you have any questions,</br>comments or</br>
+                    suggestions, feel free to email</br> us or
+                </p>
+                <form action="" class="register">
+                    <div class="left">
+                        <label for="name">Your Name</label>
+                        <input type="text">
+                        <label for="phone">Phone</label>
+                        <input type="text">
+                        <label for="email">Email</label>
+                        <input type="text">
+                    </div>
+                    <div class="right">
+                        <label for="subject">Subject</label>
+                        <input type="text">
+                        <label for="message">Message</label>
+                        <input type="text">
+                        <button type="submit" class="btn-send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <a href="#" id="top"><i class="fas fa-arrow-up"></i></a>
+            <p>© 2018 GBOX STUDIO. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
